@@ -48,8 +48,15 @@ var vectorLayer1 = new VectorLayer({
   }
 });
 
+var vectorLayer2 = new VectorLayer({
+  source: new VectorSource({
+    url: "data/geojson/2.geojson",
+    format: new GeoJSON()
+  })
+});
+
 var map = new Map({
-  layers: [vectorLayer, vectorLayer1],
+  layers: [vectorLayer, vectorLayer1, vectorLayer2],
   target: "map",
   view: new View({
     center: [0, 0],
